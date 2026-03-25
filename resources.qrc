@@ -1,0 +1,6 @@
+<!-- 执行"pyside6-rcc resources.qrc -o resources_rc.py"生成资源文件 -->
+<RCC>
+    <qresource prefix="/icons">
+        <file>johnson.png</file>
+    </qresource>
+</RCC>

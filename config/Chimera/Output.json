@@ -1,0 +1,18 @@
+{
+    "Audio": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums"
+    },
+    "Movies": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums"
+    },
+    "Music": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums"
+    },
+    "Videos": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums"
+    }
+}

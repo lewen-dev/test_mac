@@ -1,0 +1,14 @@
+{
+    "va": {
+        "hasSubdirs": true,
+        "configFile": "va.json"
+    },
+    "vods": {
+        "hasSubdirs": true,
+        "configFile": "vod.json"
+    },
+    "workoutConfig": {
+        "hasSubdirs": false,
+        "configFile": "workoutConfig.json"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "Audio": {
+        "hasSubdirs": false,
+        "configFile": null
+    },
+    "Movies": {
+        "hasSubdirs": false,
+        "configFile": null
+    },
+    "Music": {
+        "hasSubdirs": false,
+        "configFile": null
+    },
+    "Videos": {
+        "hasSubdirs": false,
+        "configFile": null
+    }
+}

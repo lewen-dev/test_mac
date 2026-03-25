@@ -1,0 +1,41 @@
+{
+    "va": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums",
+        "copy": [
+            {
+                "key": "id"
+            },
+            {
+                "key": "title",
+                "dst": "name"
+            }
+        ]
+    },
+    "vods": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums",
+        "copy": [
+            {
+                "key": "workoutVod",
+                "child": [
+                    {
+                        "key": "id"
+                    },
+                    {
+                        "key": "info",
+                        "child": [
+                            {
+                                "key": "name"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "workoutConfig": {
+        "file": "FileChecksums.json",
+        "node": "fileChecksums"
+    }
+}

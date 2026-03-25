@@ -1,0 +1,181 @@
+{
+    "va": [
+        {
+            "key": "snapshotUrl",
+            "type": "path"
+        },
+        {
+            "key": "videoId",
+            "type": "origin",
+            "suffix": "mp4"
+        }
+    ],
+    "vods": [
+        {
+            "key": "workoutVod",
+            "type": "obj",
+            "child": [
+                {
+                    "key": "image1x1",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "thumbnail",
+                            "type": "url"
+                        }
+                    ]
+                },
+                {
+                    "key": "image16x9",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "thumbnail",
+                            "type": "url"
+                        }
+                    ]
+                },
+                {
+                    "key": "instructors",
+                    "type": "array",
+                    "child": [
+                        {
+                            "key": "image1x1",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "thumbnail",
+                                    "type": "url"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "image16x9",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "thumbnail",
+                                    "type": "url"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "video",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "preview",
+                            "type": "url-param",
+                            "param": "videoId",
+                            "suffix": "mp4"
+                        },
+                        {
+                            "key": "thumbnail",
+                            "type": "url"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "workoutConfig": [
+        {
+            "key": "workoutConfig",
+            "type": "obj",
+            "child": [
+                {
+                    "key": "workoutTypes",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "items",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "icon",
+                                    "type": "url"
+                                },
+                                {
+                                    "key": "thumbnail",
+                                    "type": "url"
+                                },
+                                {
+                                    "key": "child",
+                                    "type": "array",
+                                    "child": [
+                                        {
+                                            "key": "icon",
+                                            "type": "url"
+                                        },
+                                        {
+                                            "key": "thumbnail",
+                                            "type": "url"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "accessories",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "items",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "icon",
+                                    "type": "url"
+                                },
+                                {
+                                    "key": "thumbnail",
+                                    "type": "url"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "equipments",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "items",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "icon",
+                                    "type": "url"
+                                },
+                                {
+                                    "key": "thumbnail",
+                                    "type": "url"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "key": "muscleAreas",
+                    "type": "obj",
+                    "child": [
+                        {
+                            "key": "items",
+                            "type": "array",
+                            "child": [
+                                {
+                                    "key": "svg",
+                                    "type": "url"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
