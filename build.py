@@ -4,6 +4,7 @@ PyInstaller打包脚本
 将main.py打包成独立可执行程序
 """
 
+import contextlib
 import PyInstaller.__main__
 import os
 import sys
@@ -36,7 +37,8 @@ shutil.copytree('config', config_dst)
 
 # 删除测试缓存
 config_dst_user = os.path.join(config_dst, 'UserConfig.json')
-os.remove(config_dst_user)
+with contextlib.suppress(FileNotFoundError):
+    os.remove(config_dst_user)
 
 # 开始打包
 print("开始打包...")

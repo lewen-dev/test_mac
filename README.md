@@ -1,29 +1,33 @@
-# README #
+# SDCard resource integrity tool #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### 1. 创建虚拟环境
 
-### What is this repository for? ###
+py -m venv venv
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+### 2. 激活虚拟环境
 
-### How do I get set up? ###
+* Windows:
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+venv\Scripts\activate
 
-### Contribution guidelines ###
+* Linux/Mac:
 
-* Writing tests
-* Code review
-* Other guidelines
+source venv/bin/activate
 
-### Who do I talk to? ###
+### 3. 安装依赖
 
-* Repo owner or admin
-* Other community or team contact
+pip install --upgrade pip
+
+pip install -r requirements.txt
+
+### 4. 安装pyinstaller
+
+pip install pyinstaller
+
+### 5. 编译项目
+
+py build.py
+
+### 6. 打包程序
+
+运行完编译脚本后，dist目录下生成对应版本的文件夹，包含了可执行文件和必要配置文件，整个文件夹压缩打包即可。
