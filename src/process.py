@@ -1,7 +1,9 @@
 
 import os
+from pathlib import Path
 import time
 from datetime import datetime
+import unicodedata
 from PySide6.QtCore import QThread, Signal
 from typing import List
 
@@ -171,11 +173,21 @@ class ProcessThread(QThread):
             # 检查所有文件存在性
             all_exists = True
             for filename in file_list:
-                filepath = os.path.join(dir_path, filename)
-                if not os.path.isfile(filepath):
-                    # 中断处理并记录错误
-                    Logger.error(f"在{dir_path}目录下未找到文件：{filename}")
-                    all_exists = False
+                p = Path(dir_path, filename)
+                if not p.exists():
+                    # 尝试不同归一化形式
+                    found = False
+                    for form in ('NFC', 'NFD'):
+                        norm_name = unicodedata.normalize(form, filename)
+                        candidate = p.parent / norm_name
+                        if candidate.exists():
+                            found = True
+                            break
+                            
+                    if not found:
+                        # 中断处理并记录错误
+                        Logger.error(f"在{dir_path}目录下未找到文件：{filename}")
+                        all_exists = False
             
             if not all_exists:
                 # 中断处理
