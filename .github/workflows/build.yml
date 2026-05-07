@@ -4,6 +4,11 @@ on:
   push:
     tags:
       - 'v*' # 当你推送以 v 开头的标签（如 v1.0）时触发
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g., v1.0.0)'
+        required: true
 
 jobs:
   build:
