@@ -16,9 +16,9 @@ source venv/bin/activate
 
 ### 3. 安装依赖
 
-pip install --upgrade pip
+py -m pip install --upgrade pip
 
-pip install -r requirements.txt
+py -m pip install -r requirements.txt
 
 ### 4. 安装pyinstaller
 

@@ -14,14 +14,19 @@ project_folder_name = "Resource Integrity Tool"
 
 # PyInstaller参数
 args = [
+    '--name=' + __app_name__,          # 程序名称
+    '--onefile',                       # 单文件模式
+    '--windowed',                      # 无控制台
+    '--icon=johnson.ico',              # 图标
+    '--clean',                         # 打包前清理缓存
+    
+    # 关键修改：将参数名和值分开，并删除冗余的 --hidden-import=PySide6
+    '--collect-all', 'PySide6',        
+    '--hidden-import', 'blake3',
+    '--hidden-import', 'xxhash',
+    
+    # 关键修改：脚本路径放在最后
     'src/main.py',
-    f'--name={__app_name__}',  # 可执行程序名称
-    '--onefile',  # 生成单个exe文件（不使用的话会生成文件夹）
-    '--windowed',  # GUI应用，不显示控制台窗口
-    '--icon=johnson.ico',
-    '--hidden-import=PySide6',
-    '--hidden-import=blake3',
-    '--hidden-import=xxhash',
 ]
 
 out_dir = os.path.join('dist', f'{project_folder_name} {__version__}')
